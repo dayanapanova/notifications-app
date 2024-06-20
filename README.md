@@ -1,18 +1,23 @@
 # Notifications app
 
-### Start PostgreSQL locally
+## Start database
 
 ```shell
-docker-compose up -d database
+docker-compose up database
 ```
 
-### Start dev server
+## Install packages
+
+```shell
+pnpm install
+```
+
+## Start dev server
 
 ```shell
 pnpm dev
 ```
 
-### Requirements
+## Requirements
 
 - Node >= 18.0.0
-
