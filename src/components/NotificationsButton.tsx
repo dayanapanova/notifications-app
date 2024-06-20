@@ -1,5 +1,5 @@
-import { NotificationIcon } from "~/icons/NotificationIcon";
-import { NotificationsDropdown } from "./NotificationsDropdown";
+import NotificationIcon from "~/icons/NotificationIcon";
+import NotificationsDropdown from "./NotificationsDropdown";
 import { useState } from "react";
 
 export const NotificationsButton = () => {
@@ -8,7 +8,7 @@ export const NotificationsButton = () => {
     <div className="relative">
       <NotificationsDropdown isOpen={notificationsIsOpen} />
       <button onClick={() => setNotificationsIsOpen(true)} className="text-black">
-        <NotificationIcon />
+        <NotificationIcon className="w-4 h-4" />
       </button>
     </div>
   );

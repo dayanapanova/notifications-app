@@ -3,7 +3,7 @@ import type { AppType, AppProps } from 'next/app';
 import { trpc } from '~/utils/trpc';
 import '~/styles/globals.css';
 import Head from 'next/head';
-import { Header } from '~/components/Header';
+import Header from '~/components/Header';
 
 
 const MyApp = (({ Component, pageProps }: AppProps) => {

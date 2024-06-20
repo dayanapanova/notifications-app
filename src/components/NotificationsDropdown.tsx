@@ -1,10 +1,10 @@
-import { NotificationItem } from "./NotificationItem";
+import NotificationItem from "./NotificationItem";
 
 type Props = {
   isOpen: boolean
 }
 
-export const NotificationsDropdown = ({ isOpen }: Props) => {
+const NotificationsDropdown = ({ isOpen }: Props) => {
   if (!isOpen) {
     return null
   }
@@ -17,3 +17,5 @@ export const NotificationsDropdown = ({ isOpen }: Props) => {
     </div>
   );
 };
+
+export default NotificationsDropdown;
