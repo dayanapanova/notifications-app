@@ -16,7 +16,7 @@ const MyApp = (({ Component, pageProps }: AppProps) => {
 
       <main className="h-screen text-black">
         <Header />
-        <Component {...pageProps} />ö
+        <Component {...pageProps} />
       </main>
     </>
   );
