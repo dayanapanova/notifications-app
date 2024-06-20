@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
-import NotificationIcon from "~/icons/NotificationIcon";
-import NotificationsDropdown from "./NotificationsDropdown";
-import useOutsideClick from "~/hooks/useOutsideClick";
+import { NotificationIcon } from "~/icons/NotificationIcon";
+import { NotificationsDropdown } from "./NotificationsDropdown";
+import { useOutsideClick } from "~/hooks/useOutsideClick";
 
-const NotificationsButton = () => {
+export const NotificationsButton = () => {
   const [notificationsIsOpen, setNotificationsIsOpen] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [notificationCount, setNotificationCount] = useState(5);
@@ -24,5 +24,3 @@ const NotificationsButton = () => {
     </div>
   );
 };
-
-export default NotificationsButton;

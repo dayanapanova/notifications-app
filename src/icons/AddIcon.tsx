@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const AddIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,6 +12,4 @@ const AddIcon = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   );
 }
-
-export default AddIcon;
 

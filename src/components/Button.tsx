@@ -1,5 +1,5 @@
 import React from 'react';
-import AddIcon from '~/icons/AddIcon';
+import { AddIcon } from '~/icons/AddIcon';
 
 type Props = {
   icon?: React.ReactNode;
@@ -7,7 +7,7 @@ type Props = {
   onClick: () => void;
 }
 
-const Button = ({ icon: Icon, children, onClick }: Props) => {
+export const Button = ({ icon: Icon, children, onClick }: Props) => {
   return (
     <button
       onClick={onClick}
@@ -18,6 +18,3 @@ const Button = ({ icon: Icon, children, onClick }: Props) => {
     </button>
   );
 };
-
-
-export default Button;

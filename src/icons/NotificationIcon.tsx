@@ -1,6 +1,6 @@
 import React from "react";
 
-const NotificationIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const NotificationIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,6 +12,3 @@ const NotificationIcon = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   );
 }
-
-export default NotificationIcon;
-

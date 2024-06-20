@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
-import NotificationItem from "./NotificationItem";
-import Button from "./Button";
-import Modal from "./Modal";
+import { NotificationItem } from "./NotificationItem";
+import { Button } from "./Button";
+import { Modal } from "./Modal";
 
 
 type Props = {
@@ -15,7 +15,7 @@ const notificationTypes = [
   { id: 4, type: 'Join workspace' },
 ];
 
-const NotificationsDropdown = ({ isOpen }: Props) => {
+export const NotificationsDropdown = ({ isOpen }: Props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -63,5 +63,3 @@ const NotificationsDropdown = ({ isOpen }: Props) => {
     </>
   );
 };
-
-export default NotificationsDropdown;
