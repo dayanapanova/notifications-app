@@ -1,4 +1,4 @@
-import { NotificationsButton } from "./NotificationsButton";
+import NotificationsButton from "./NotificationsButton";
 
 const Header = () => {
   return (
