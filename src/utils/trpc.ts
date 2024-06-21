@@ -76,7 +76,7 @@ export const trpc = createTRPCNext<AppRouter, SSRContext>({
             // This is so you can pass through things like cookies when we're server-side rendering
 
             const {
-              // If you're using Node 18 before 18.15.0, omit the "connection" header
+              // eslint-disable-next-line
               connection: _connection,
               ...headers
             } = ctx.req.headers;

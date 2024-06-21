@@ -1,20 +1,30 @@
-import React from 'react';
-import { AddIcon } from '~/icons/AddIcon';
+import clsx from 'clsx';
+import React, { ButtonHTMLAttributes } from 'react';
 
 type Props = {
-  icon?: React.ReactNode;
+  isOutlined?: boolean;
   children?: React.ReactNode;
-  onClick: () => void;
-}
+  onClick?: () => void;
+};
 
-export const Button = ({ icon: Icon, children, onClick }: Props) => {
+export const Button = ({
+  isOutlined,
+  children,
+  className,
+  onClick,
+}: Props & ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center px-2 py-1.5 bg-blue-500 text-white rounded-md shadow hover:bg-blue-600 focus:outline-none"
+      className={clsx(
+        'inline-flex items-center p-3 text-md rounded-md shadow focus:outline-none justify-center',
+        className,
+        isOutlined
+          ? 'bg-white border border-blue-500 text-blue-500'
+          : 'bg-blue-500 text-white hover:bg-blue-600',
+      )}
     >
-      <span className="text-sm">{children}</span>
-      {Icon && <AddIcon className="w-4 h-4 ml-2 text-white" />}
+      {children}
     </button>
   );
 };

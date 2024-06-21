@@ -7,16 +7,17 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+const firstUserId = '186492cb-3eab-4aa4-ab9c-8e79004c83a9';
+
 async function main() {
-  const firstPostId = '5c03994c-fc16-47e0-bd02-d218a370a078';
-  await prisma.post.upsert({
+  await prisma.user.upsert({
     where: {
-      id: firstPostId,
+      id: firstUserId,
     },
     create: {
-      id: firstPostId,
-      title: 'First Post',
-      text: 'This is an example post generated from `prisma/seed.ts`',
+      id: firstUserId,
+      email: 'dayana@dev02.team',
+      name: 'Dayana Panova',
     },
     update: {},
   });

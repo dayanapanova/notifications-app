@@ -1,4 +1,5 @@
 import React from 'react';
+import { CloseIcon } from '~/icons/CloseIcon';
 
 type Props = {
   isOpen: boolean;
@@ -16,14 +17,12 @@ export const Modal = ({ isOpen, onClose, title, children }: Props) => {
       <div className="bg-white rounded-lg overflow-hidden shadow-xl max-w-md mx-auto z-50">
         <div className="px-6 py-4">
           <div className="flex justify-between items-center">
-            <h2 className="text-xl font-semibold">{title}</h2>
-            <button onClick={onClose} className="text-black">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
+            <h2 className="text-xl text-gray-500 font-medium">{title}</h2>
+            <button onClick={onClose} className="text-gray-700">
+              <CloseIcon className="size-8" />
             </button>
           </div>
-          <div className="mt-4">
+          <div className="mt-4 min-w-[300px] md:min-w-[400px]">
             {children}
           </div>
         </div>
