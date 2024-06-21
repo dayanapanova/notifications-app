@@ -19,9 +19,10 @@ type BaseItemProps = {
   description: string;
   onClick?: () => void;
   icon?: React.ReactNode;
+  className?: string;
 };
 
-const BaseItem = ({ notification, title, description, onClick, icon }: BaseItemProps) => {
+const BaseItem = ({ notification, title, description, onClick, icon, className }: BaseItemProps) => {
   const utils = trpc.useUtils();
   const { mutateAsync: markAsRead } = trpc.notification.markAsRead.useMutation({
     onSuccess: async () => {
@@ -42,7 +43,8 @@ const BaseItem = ({ notification, title, description, onClick, icon }: BaseItemP
       }}
       className={clsx(
         'p-3 text-left hover:bg-gray-50 text-sm w-full flex gap-3 border-b-2 border-gray-50 cursor-pointer',
-        isUnread && 'bg-gray-100 hover:!bg-gray-100',
+        isUnread && 'bg-gray-100 hover:!bg-gray-100  border-l-4',
+        className,
       )}
     >
       <Avatar name={notification?.user?.name}>
@@ -74,6 +76,7 @@ export const NotificationItem = ({ notification, onClick }: Props) => {
           push("/comments");
           onClick?.();
         }}
+        className="border-l-yellow-400"
         description="tagged you in a comment"
       />
     );
@@ -89,6 +92,7 @@ export const NotificationItem = ({ notification, onClick }: Props) => {
           alert(`Release number ${notification?.releaseVersion}`);
           onClick?.();
         }}
+        className="border-l-lime-400"
         description="see what’s new"
       />
     );
@@ -102,6 +106,7 @@ export const NotificationItem = ({ notification, onClick }: Props) => {
           push("/workspace");
           onClick?.();
         }}
+        className="border-l-green-400"
         description="joined your workspace"
       />
     );
@@ -115,6 +120,7 @@ export const NotificationItem = ({ notification, onClick }: Props) => {
           push("/chats");
           onClick?.();
         }}
+        className="border-l-cyan-400"
         description="shared a chat with you"
       />
     );
