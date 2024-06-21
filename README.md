@@ -1,6 +1,6 @@
 # Notifications app
 
-![image](https://github.com/dayanapanova/notifications-app/assets/67751911/bc32551e-a898-44fa-ad2a-5957173d2a10)
+![image](https://github.com/dayanapanova/notifications-app/assets/67751911/5276e71c-fc12-48e5-bf78-7cbe58b7bea1)
 
 
 [DEMO](https://notifications-app-eta.vercel.app)
