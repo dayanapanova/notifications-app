@@ -14,7 +14,7 @@ enum NotificationType {
   JoinWorkspace
 }
 
-model Post {
+model Article {
   id    String @id @default(uuid())
   title String
   text  String
